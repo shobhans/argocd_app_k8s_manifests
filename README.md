@@ -20,8 +20,15 @@ kubectl apply -f staging-application.yaml
 
 ```
 
+![gitops_argocd](screenshots/gitops2.png)
+
 ### Links
 
 - Install Jenkins on K8S using helm - https://www.jenkins.io/doc/book/installing/kubernetes/#install-jenkins-with-helm-v3
 - Getting started with ArgoCD - https://argo-cd.readthedocs.io/en/stable/getting_started/
 - Create SpringBoot App - https://start.spring.io/
+
+### Screenshots
+
+![gitops_argocd](screenshots/gitops1.png)
+![gitops_argocd](screenshots/gitops3.png)
