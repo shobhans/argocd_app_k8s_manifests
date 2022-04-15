@@ -16,7 +16,7 @@ spec:
         app: coolapp-prod
     spec:
       containers:
-      - image: shobhan/docker-spring:1
+      - image: shobhan/docker-spring:4
         name: coolapp
         ports:
         - containerPort: 8080
