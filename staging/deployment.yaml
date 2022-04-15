@@ -16,7 +16,7 @@ spec:
         app: coolapp-staging
     spec:
       containers:
-      - image: shobhan/docker-spring:4
+      - image: shobhan/docker-spring:2
         name: coolapp
         ports:
         - containerPort: 8080
