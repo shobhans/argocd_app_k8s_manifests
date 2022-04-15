@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: coolapp-argo-staging
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/shobhans/argocd_app_k8s_manifests.git
+    targetRevision: HEAD
+    path: staging
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: coolapp-staging
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true

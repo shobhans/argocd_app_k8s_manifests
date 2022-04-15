@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: coolapp-staging-svc
+  name: coolapp-staging-svc
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 30083
+  selector:
+    app: coolapp-staging
+  type: NodePort

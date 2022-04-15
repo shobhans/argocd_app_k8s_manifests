@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: coolapp-staging
+  name: coolapp-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coolapp-staging
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: coolapp-staging
+    spec:
+      containers:
+      - image: shobhan/docker-spring:1
+        name: coolapp
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
